@@ -1,4 +1,4 @@
-import React,{PropTypes} from 'react';
+import React, {PropTypes} from 'react';
 
 
 const Link =({active,children,onClick})=>{
@@ -8,7 +8,7 @@ const Link =({active,children,onClick})=>{
 
     return(
         <a ref="#"
-            onClick={e=>{
+            onClick={e=> {
                 e.preventDefault()
                 onClick
             }}
@@ -19,7 +19,7 @@ const Link =({active,children,onClick})=>{
 }
 
 
-Link.protoTypes ={
+Link.propTypes ={
     active: PropTypes.bool.isRequired,
     children:PropTypes.node.isRequired,
     onClick:PropTypes.func.isRequired
