@@ -12,7 +12,6 @@ export const addTodo =(text)=>{
     }
 }
 
-
 //hace visible el texto
 export const setVisibilityFilter=(filter)=>{
     return{

@@ -7,7 +7,9 @@ import VisibleTodoList from '../container/VisibleTodoList';
 const App=()=>(
     <div>
         <AddTodo/>
-        <VisibleTodoList/>
+        <VisibleTodoList
+            filter={URLSearchParams.filter || 'SHOW_ALL'}
+        />
         <Footer/>
     </div>
 )

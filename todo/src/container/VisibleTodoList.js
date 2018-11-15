@@ -16,11 +16,11 @@ const getVisibleTodos =(todos, filter)=>{
     }
 }
 
-const mapStateToProps =(state)=>{
+const mapStateToProps =(state, ownProps)=>{
     return{
-        todos:getVisibleTodos(state.todos,state.visibilityFilter)
-    }
-}
+        todos:getVisibleTodos(state.todos, ownProps.filter)
+    };
+};
 
 const mapDispatchToProps =(dispatch)=>{
     return {
