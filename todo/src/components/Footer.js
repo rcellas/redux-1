@@ -3,7 +3,7 @@ import FilterLink from '../container/FilterLink';
 
 
 //información del footer
-const Footer=()=>{
+const Footer=()=>(
     <p>
         Show:
         {" "}
@@ -19,7 +19,7 @@ const Footer=()=>{
             Completados
         </FilterLink>
     </p>
-}
+)
 
 
 export default Footer;

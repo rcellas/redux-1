@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react';
+import React  from 'react';
 
 
 
@@ -14,10 +14,10 @@ const Todo =({ onClick,complete,text})=>(
     </li>
 )
 
-Todo.propTypes={
+/*Todo.propTypes={
     onClick:PropTypes.func.isRequired,
     complete:PropTypes.bool.isRequired,
     text:PropTypes.string.isRequired
-}
+}*/
 
 export default Todo;

@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
 
 
 const Link =({active,children,onClick})=>{
@@ -7,10 +7,11 @@ const Link =({active,children,onClick})=>{
     }
 
     return(
-        <a ref="#"
+        //poner link para el href
+        <a href="https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-is-valid.md"
             onClick={e=> {
                 e.preventDefault()
-                onClick
+                onClick()
             }}
         >
             {children}
@@ -19,10 +20,10 @@ const Link =({active,children,onClick})=>{
 }
 
 
-Link.propTypes ={
+/*Link.propTypes ={
     active: PropTypes.bool.isRequired,
     children:PropTypes.node.isRequired,
     onClick:PropTypes.func.isRequired
-}
+}*/
 
 export default Link;

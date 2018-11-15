@@ -1,9 +1,9 @@
-let nextTodoId = 0
 
+let nextTodoId = 0
 
 //en el type lo que hace es nos deja una huella de que ha pasado por allí
 
-//agrega un texto
+//creadores de acciones
 export const addTodo =(text)=>{
     return{
         type:'ADD_TODO',
