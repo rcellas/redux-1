@@ -5,7 +5,7 @@ import {
     selecSubreddit,
     fetchPostsIfNeeded,
     invalidateSubreddit
-} from '../actions';
+} from '../actions/actions';
 import Picker from '../componets/Picker';
 import Posts from '../componets/Posts';
 
@@ -30,6 +30,8 @@ class AsyncApp extends Component{
     }
 
     handleChange(nextSubreddit){
+        console.log('nextSubreddit', nextSubreddit);
+
         this.props.dispatch(selecSubreddit(nextSubreddit))
         this.props.dispatch(fetchPostsIfNeeded(nextSubreddit))
     }
@@ -57,7 +59,7 @@ class AsyncApp extends Component{
                             Último update en {new Date(lastUpdate).toLocaleDateString()}.{' '}
                         </span>
                     )}
-                    {!isFetching &&(
+                    {!isFetching && (
                         <button onClick={this.handleRefreshClick} style={{backgroundColor:"pink"}}>Refresh</button>
                     )}
                 </p>

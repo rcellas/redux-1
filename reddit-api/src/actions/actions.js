@@ -26,12 +26,12 @@ function requestPosts(subreddit){
         subreddit
     }
 }
-function receivePosts(subreddit, json){
+function receivePosts(subreddit,json){
     return {
         type: RECEIVE_POSTS,
         subreddit,
         //aqui le decimos que en la parte posts los pille del json con su data y de los hijos que tenga me forme la información requerida
-        posts: json.data.children.map(child=>child.data),
+        posts: json.data.children.map(child=> child.data),
         receiveAt: Date.now()
     }
 }
@@ -40,7 +40,7 @@ function fetchPosts(subreddit){
     return dispatch=> {
         dispatch(requestPosts(subreddit))
         return fetch(`https://www.reddit.com/r/${subreddit}.json`)
-            .then(response=>response.json())
+            .then(response=> response.json())
             .then(json=>dispatch(receivePosts(subreddit,json)))
     }
 }
